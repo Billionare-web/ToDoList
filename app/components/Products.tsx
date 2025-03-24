@@ -65,7 +65,7 @@ export default function Todo() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4 bg-black shadow-md rounded-lg mt-40">
+    <div className="max-w-md mx-auto p-4 shadow-md rounded-lg mt-40">
       <h2 className="text-xl font-bold mb-4">To-Do List</h2>
       <div className="flex gap-2 mb-4">
         <input
@@ -77,7 +77,7 @@ export default function Todo() {
         />
         <button
           onClick={editingTask ? saveEdit : addTask}
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 px-4 py-2 rounded"
         >
           {editingTask ? "Saqlash" : "Qo‘shish"}
         </button>
@@ -97,10 +97,7 @@ export default function Todo() {
               >
                 <MdEdit />
               </button>
-              <button
-                onClick={() => deleteTask(task.id)}
-                className="text-white"
-              >
+              <button onClick={() => deleteTask(task.id)} className="">
                 <FaTrash />
               </button>
             </div>
